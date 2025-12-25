@@ -13,7 +13,7 @@
 <body class="bg-black text-white overflow-x-hidden font-[Inter]">
 
 <!-- Background Music (hidden, browser-safe) -->
-<audio id="bgMusic" loop muted>
+<audio id="bgMusic" loop autoplay>
     <source src="assets/audio/John Cena.mp3" type="audio/mpeg"></audio>
 
 <!-- STAR MAP -->
@@ -83,6 +83,17 @@
 </footer>
 
 <script src="assets/js/main.js"></script>
+  <script>
+  // Autoplay background music
+  const audio = document.getElementById('bgMusic');
+  audio.volume = 0.3; // Set volume to 30%
+  audio.play().catch(() => {
+    // Autoplay blocked by browser, wait for user interaction
+    document.addEventListener('click', () => {
+      audio.play().catch(err => console.log('Audio play failed:', err));
+    }, { once: true });
+  });
+</script>
 </body>
 </html>
 
