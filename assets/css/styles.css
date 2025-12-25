@@ -1,0 +1,18 @@
+
+body { font-family: 'Inter', sans-serif; }
+.glow { text-shadow: 0 0 40px rgba(255,255,255,0.3); }
+.glass {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+  padding: 24px;
+  border-radius: 16px;
+}
+.parallax {
+  background: radial-gradient(circle at top, #1e1e3f, #000);
+}
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
