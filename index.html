@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Monu Kumar | Cinematic Profile</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body class="bg-black text-white overflow-x-hidden">
+
+<!-- AUDIO TOGGLE -->
+<button id="musicToggle" class="fixed top-5 right-5 z-50 bg-white/10 backdrop-blur px-4 py-2 rounded-full">
+🎵 Music
+</button>
+<audio id="bgMusic" loop>
+  <source src="assets/audio/ambient.mp3" type="audio/mpeg">
+</audio>
+
+<!-- HERO -->
+<section class="parallax min-h-screen flex items-center justify-center text-center">
+  <div>
+    <h1 class="text-6xl md:text-8xl font-bold glow">Monu Kumar</h1>
+    <p class="mt-4 text-xl text-gray-400">Born 23 June 1994 • Project Head</p>
+    <p id="typing" class="mt-8 text-lg text-gray-300"></p>
+  </div>
+</section>
+
+<!-- STAR MAP -->
+<canvas id="stars"></canvas>
+
+<!-- PERSONALITY -->
+<section class="py-24 px-6 bg-zinc-900">
+  <h2 class="text-3xl text-center mb-12">Personality & Nature</h2>
+  <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+    <div class="glass">Emotionally intelligent, protective, and calm under pressure.</div>
+    <div class="glass">Leadership driven by responsibility and long-term vision.</div>
+  </div>
+</section>
+
+<!-- AI FUTURE -->
+<section class="py-24 px-6">
+  <h2 class="text-3xl text-center mb-10">AI Future Prediction</h2>
+  <p class="max-w-3xl mx-auto text-center text-gray-300">
+    Based on personality patterns, leadership trajectory, and astrological influence,
+    Monu is projected to evolve into a senior strategic leader, managing large-scale
+    initiatives with authority, stability, and influence over the next decade.
+  </p>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-10 text-center text-gray-500">
+  Built for fun • GitHub Pages Ready
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
