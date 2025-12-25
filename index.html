@@ -1,53 +1,89 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Monu Kumar | Cinematic Profile</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css">
+  <meta charset="UTF-8">
+  <title>Monu Kumar | Cinematic Profile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
-<body class="bg-black text-white overflow-x-hidden">
+<body class="bg-black text-white overflow-x-hidden font-[Inter]">
 
-<!-- HERO -->
-<section class="parallax min-h-screen flex items-center justify-center text-center">
-  <div>
-    <h1 class="text-6xl md:text-8xl font-bold glow">Monu Kumar</h1>
-    <p class="mt-4 text-xl text-gray-400">Born 23 June 1994 • Project Head</p>
-    <p id="typing" class="mt-8 text-lg text-gray-300"></p>
-  </div>
-</section>
+<!-- Background Music (hidden, browser-safe) -->
+<audio id="bgMusic" loop muted>
+  <source src="assets/audio/ambient.mp3" type="audio/mpeg">
+</audio>
 
 <!-- STAR MAP -->
 <canvas id="stars"></canvas>
+
+<!-- HERO -->
+<section
+  class="min-h-screen flex items-center justify-center text-center bg-cover bg-center"
+  style="background-image: url('assets/images/hero.jpg');"
+>
+  <div class="bg-black/60 p-10 rounded-2xl backdrop-blur">
+    <h1 class="text-6xl md:text-8xl font-bold glow">Monu Kumar</h1>
+    <p class="mt-4 text-xl text-gray-300">Born 23 June 1994 • Project Head</p>
+    <p id="typing" class="mt-8 text-lg text-gray-200"></p>
+  </div>
+</section>
 
 <!-- PERSONALITY -->
 <section class="py-24 px-6 bg-zinc-900">
   <h2 class="text-3xl text-center mb-12">Personality & Nature</h2>
   <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
-    <div class="glass">Emotionally intelligent, protective, and calm under pressure.</div>
-    <div class="glass">Leadership driven by responsibility and long-term vision.</div>
+    <div class="glass">
+      Emotionally intelligent, protective, and calm under pressure.
+    </div>
+    <div class="glass">
+      Leadership driven by responsibility and long-term vision.
+    </div>
   </div>
 </section>
 
-<!-- AI FUTURE -->
+<!-- GALLERY -->
 <section class="py-24 px-6">
-  <h2 class="text-3xl text-center mb-10">AI Future Prediction</h2>
-  <p class="max-w-3xl mx-auto text-center text-gray-300">
-    Based on personality patterns, leadership trajectory, and astrological influence,
-    Monu is projected to evolve into a senior strategic leader, managing large-scale
-    initiatives with authority, stability, and influence over the next decade.
-  </p>
+  <h2 class="text-3xl text-center mb-12">Gallery</h2>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+    <img src="assets/images/monu1.jpg" class="rounded-xl hover:scale-105 transition">
+    <img src="assets/images/monu2.jpg" class="rounded-xl hover:scale-105 transition">
+    <img src="assets/images/monu3.jpg" class="rounded-xl hover:scale-105 transition">
+  </div>
+</section>
+
+<!-- FUTURE PREDICTION EXPLORER -->
+<section class="py-24 px-6 bg-zinc-900">
+  <h2 class="text-3xl text-center mb-10">Future Prediction Explorer</h2>
+
+  <div class="max-w-xl mx-auto text-center space-y-6">
+    <select
+      id="timeline"
+      class="w-full p-3 rounded bg-black border border-gray-600 text-white"
+    >
+      <option value="">Select timeline</option>
+      <option value="month">Next Month</option>
+      <option value="six">Next 6 Months</option>
+      <option value="year">Next Year</option>
+      <option value="five">Next 5 Years</option>
+    </select>
+
+    <p
+      id="prediction"
+      class="text-gray-300 text-lg min-h-[90px]"
+    ></p>
+  </div>
 </section>
 
 <!-- FOOTER -->
-<footer class="py-10 text-center text-gray-500">
+<footer class="py-10 text-center text-gray-500 text-sm">
   Built for fun • GitHub Pages Ready
 </footer>
 
 <script src="assets/js/main.js"></script>
 </body>
 </html>
+
